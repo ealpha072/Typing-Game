@@ -1,7 +1,7 @@
 body{
-	background-color:darkgray;
+    background-color:darkgray;
 }
-.row input{
+.upper input{
     height:80px;
     width:50%;
     margin:20px auto;
@@ -12,7 +12,7 @@ body{
     color:darkblue;
 }
 .upper p{
-	font-size:x-large;
+    font-size:x-large;
 }
 .upper p #time{
     color:greenyellow;
@@ -20,4 +20,20 @@ body{
 .upper h4{
     font-weight:1000;
     font-size:xx-large;
+}
+.upper select{
+    width:40%;
+    height:40px;
+    font-size:large;
+}
+#instructions{
+    width:50%;
+    text-align:center;
+    margin:20px auto;
+    border:2px inset;
+    background-color:darkgray;
+}
+#instructions p{
+    font-size:large;
+    font-weight:500;
 }
