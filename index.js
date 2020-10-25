@@ -4,13 +4,13 @@ window.addEventListener('load',initialize)
 
 //level
 const levels ={
-	easy:5,
-	medium:3,
-	hard:2
+	easy:7,
+	medium:5,
+	hard:3
 }
 
 // change levels
-const currentLevel = levels.easy;
+let currentLevel = levels.easy;
 
 let time = currentLevel;
 let score = 0;
@@ -23,31 +23,57 @@ const message = document.querySelector('#message');
 const timeLeft = document.querySelector('#time-left');
 const scoreDisplay = document.querySelector('#score');
 const currentWord = document.querySelector('#current-word');
+const difficultyLevels = document.querySelector('#level');
 
+difficultyLevels.addEventListener('change',changeLevel)
 //words array
 const words = [
-'words',
-'extravagant',
-'hello',
-'seconds',
-'computer',
-'bread',
-'juice',
-'toppers',
-'bottom',
-'laptop',
-'minute',
-'hours',
-'economics',
-'people',
-'wayside',
-'roads',
-'internet',
-'supper',
-'glue',
-'introspective',
-'retrospective',
-]; //add more
+	'words',
+	'hello',
+	'seconds',
+	'computer',
+	'bread',
+	'juice',
+	'toppers',
+	'bottom',
+	'laptop',
+	'minute',
+	'hours',
+	'economics',
+	'people',
+	'wayside',
+	'roads',
+	'internet',
+	'supper',
+	'glue',
+	'introspective',
+	'retrospective',
+	'initialize',
+	'output',
+	'wash',
+	'insult',
+	'exacerbate',
+	'aggrevate',
+	'compund',
+	'intensify',
+	'enormity',
+	'disinterested',
+	'nonpulssed',
+	'irregardless',
+	'choose',
+	'abjure',
+	'abscond',
+	'amorphous',
+	'anathema',
+	'blandishment',
+	'edict',
+	'ebullient',
+	'emend',
+	'emulate',
+	'pert',
+	'penchant',
+	'plethora'
+];
 
 //game initialization
 function initialize (){
@@ -113,4 +139,36 @@ function matchWords(){
 			message.innerHTML = '';
 			return false;
 		}
+}
+
+function changeLevel(e){
+	let level = e.target.value
+	if(level === 'medium'){
+		wordInput.focus();
+		score = 0;
+		message.innerHTML = '';
+		isPlaying =true;
+		currentLevel = levels.medium;
+		chosenTime.innerHTML = currentLevel; 
+		time = currentLevel+1;
+		startMatch();
+	}else if(level == 'hard'){
+		wordInput.focus();
+		score = 0;
+		message.innerHTML = '';
+		isPlaying =true;
+		currentLevel = levels.hard;
+		chosenTime.innerHTML = currentLevel; 
+		time = currentLevel+1;
+		startMatch();
+	}else if(level == 'easy'){
+		wordInput.focus();
+		score = 0;
+		message.innerHTML = '';
+		isPlaying =true;
+		currentLevel = levels.easy;
+		chosenTime.innerHTML = currentLevel; 
+		time = currentLevel+1;
+		startMatch();
+	}
 }
