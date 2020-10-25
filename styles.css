@@ -5,5 +5,19 @@ body{
     height:80px;
     width:50%;
     margin:20px auto;
-    font-size:xx-large
+    font-size:xx-large;
+}
+.upper #current-word{
+    font-size:xxx-large;
+    color:darkblue;
+}
+.upper p{
+	font-size:x-large;
+}
+.upper p #time{
+    color:greenyellow;
+}
+.upper h4{
+    font-weight:1000;
+    font-size:xx-large;
 }
