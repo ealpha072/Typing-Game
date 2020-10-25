@@ -1,7 +1,4 @@
 window.addEventListener('load',initialize)
-
-//globals
-
 //level
 const levels ={
 	easy:7,
@@ -11,10 +8,9 @@ const levels ={
 
 // change levels
 let currentLevel = levels.easy;
-
-let time = currentLevel;
-let score = 0;
-let isPlaying;
+let time = currentLevel,
+	score = 0,
+	isPlaying;
 
 //dom elements
 const wordInput = document.querySelector('#input');
@@ -26,6 +22,7 @@ const currentWord = document.querySelector('#current-word');
 const difficultyLevels = document.querySelector('#level');
 
 difficultyLevels.addEventListener('change',changeLevel)
+
 //words array
 const words = [
 	'words',
@@ -89,7 +86,6 @@ function initialize (){
 	setInterval(checkStatus,50)
 }
 
-
 function loadWord(words){
 	//generate random index
 	const randomIndex = Math.floor(Math.random()*words.length);
@@ -130,7 +126,6 @@ function startMatch(){
 	}
 }
 
-//matching currentwords to input
 function matchWords(){
 	if(wordInput.value === currentWord.innerHTML){
 			message.innerHTML = 'Correct!!!!'
