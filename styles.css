@@ -1,6 +1,9 @@
+html
 body{
-    background-color:darkgray;
+    
+    font-family:cursive;
 }
+
 .upper input{
     height:80px;
     width:50%;
@@ -9,7 +12,6 @@ body{
 }
 .upper #current-word{
     font-size:xxx-large;
-    color:darkblue;
 }
 .upper p{
     font-size:x-large;
