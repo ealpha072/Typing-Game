@@ -51,7 +51,7 @@ const words = [
 	'insult',
 	'exacerbate',
 	'aggrevate',
-	'compund',
+	'compound',
 	'intensify',
 	'enormity',
 	'disinterested',
